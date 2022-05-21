@@ -72,7 +72,7 @@ class AdminServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'admin');
+        $this->loadViewsFrom(config('admin.views_dir'), 'admin');
 
         $this->ensureHttps();
 
